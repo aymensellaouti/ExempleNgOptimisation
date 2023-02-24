@@ -1,17 +1,17 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {User} from "../users.service";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { User } from '../users.service';
 
 export const fibonnaci = (n: number): number => {
-  if (n==1 || n==0) {
+  if (n == 1 || n == 0) {
     return 1;
   }
-  return fibonnaci(n-1) + fibonnaci(n-2);
-}
+  return fibonnaci(n - 1) + fibonnaci(n - 2);
+};
 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent {
   @Input() usersCluster: string = '';
@@ -23,7 +23,9 @@ export class UserListComponent {
     this.userFullName = '';
   }
   fibo(n: number): number {
+    /*     console.log(n); */
     const fib = fibonnaci(n);
+    /*     console.log(fib); */
     return fib;
   }
 }
