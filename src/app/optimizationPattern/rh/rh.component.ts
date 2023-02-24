@@ -16,12 +16,20 @@ export class RhComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadChart();
+  }
+
+  loadChart() {
     this.ngZone.runOutsideAngular(() => {
       this.createChart();
     });
   }
-  addUser(list: User[], newUser: string) {
-    this.userService.addUser(list, newUser);
+  addUser(list: User[], newUser: string): User[] {
+    setTimeout(() => {
+      this.chart.destroy();
+      this.loadChart();
+    });
+    return this.userService.addUser(list, newUser);
   }
   createChart() {
     const data = [

@@ -21,6 +21,7 @@ import { RhComponent } from './optimizationPattern/rh/rh.component';
 import { UserListComponent } from './optimizationPattern/user-list/user-list.component';
 import { AddUserComponent } from './optimizationPattern/rh/add-user/add-user.component';
 import { UsersComponent } from './optimizationPattern/rh/users/users.component';
+import { FiboPipe } from './optimizationPattern/rh/pipes/fibo.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { UsersComponent } from './optimizationPattern/rh/users/users.component';
     RhComponent,
     UserListComponent,
     AddUserComponent,
-    UsersComponent
+    UsersComponent,
+    FiboPipe
   ],
   imports: [
     BrowserModule,
