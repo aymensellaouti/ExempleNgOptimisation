@@ -19,6 +19,8 @@ import { ParentComponent } from './components/parent/parent.component';
 import { FilsComponent } from './components/fils/fils.component';
 import { RhComponent } from './optimizationPattern/rh/rh.component';
 import { UserListComponent } from './optimizationPattern/user-list/user-list.component';
+import { ListUsersComponent } from './optimizationPattern/list-users/list-users.component';
+import { AddUserComponent } from './optimizationPattern/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { UserListComponent } from './optimizationPattern/user-list/user-list.com
     ParentComponent,
     FilsComponent,
     RhComponent,
-    UserListComponent
+    UserListComponent,
+    ListUsersComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
